@@ -631,22 +631,12 @@
 - (void)finishPickingAssets
 {
     NSMutableArray *assets = [[NSMutableArray alloc] initWithArray:self.orderedSelectedItem];
-    //
-    //    for (NSIndexPath *index in self.orderedSelectedItem)
-    //    {
-    //        [assets addObject:[self.assets objectAtIndex:index.item]];
-    //    }
-    //
     if([assets count]>0)
     {
         UzysAssetsPickerController *picker = (UzysAssetsPickerController *)self;
         
         if([picker.delegate respondsToSelector:@selector(uzysAssetsPickerController:didFinishPickingAssets:)])
             [picker.delegate uzysAssetsPickerController:picker didFinishPickingAssets:assets];
-        
-        [self dismissViewControllerAnimated:YES completion:^{
-            
-        }];
     }
 }
 #pragma mark - Helper methods
@@ -1094,11 +1084,8 @@
             
         }
     }
-    
-    [picker dismissViewControllerAnimated:YES completion:^{}];
-    
-    
 }
+
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
 {
     [picker dismissViewControllerAnimated:YES completion:^{
