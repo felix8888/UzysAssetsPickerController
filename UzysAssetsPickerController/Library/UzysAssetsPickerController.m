@@ -1084,6 +1084,7 @@
             
         }
     }
+	[picker dismissViewControllerAnimated:YES completion:^{}];
 }
 
 - (void)imagePickerControllerDidCancel:(UIImagePickerController *)picker
