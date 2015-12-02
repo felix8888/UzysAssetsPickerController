@@ -635,8 +635,8 @@
     {
         UzysAssetsPickerController *picker = (UzysAssetsPickerController *)self;
         
-        if([picker.delegate respondsToSelector:@selector(uzysAssetsPickerController:didFinishPickingAssets:)])
-            [picker.delegate uzysAssetsPickerController:picker didFinishPickingAssets:assets];
+        if([picker.delegate respondsToSelector:@selector(uzysAssetsPickerController:didFinishPickingMediaAssets:)])
+            [picker.delegate uzysAssetsPickerController:picker didFinishPickingMediaAssets:assets];
     }
 }
 #pragma mark - Helper methods
